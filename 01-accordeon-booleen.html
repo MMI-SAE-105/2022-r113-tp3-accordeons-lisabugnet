@@ -10,18 +10,28 @@
   <body>
     <h1>Accordéon avec des booléens</h1>
     <div class="accordeon">
+      <dl x-data="{bouton1IsOpen: false}">
+        <dt @click="bouton1IsOpen = ! bouton1IsOpen"><button>bouton 1</button></dt>
+        <div id="bouton 1" x-show="bouton1IsOpen" x-transition.duration.800ms>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ducimus, optio consectetur possimus mollitia placeat non ab quod, odit odio beatae ratione culpa. Ex, ut. Consequuntur officia amet cumque sed?</p>
+        </div>
+      </dl>
       <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ducimus, optio consectetur possimus mollitia placeat non ab quod, odit odio beatae ratione culpa. Ex, ut. Consequuntur officia amet cumque sed?</p>
+          <dl x-data="{bouton2IsOpen: false}">
+            <dt @click="bouton2IsOpen = ! bouton2IsOpen"><button>bouton 2</button></dt>
+            <div id="bouton 2" x-show="bouton2IsOpen" x-transition.duration.800ms>
+              <p>Recusandae quidem asperiores nulla veniam, autem quos eos iure facere maiores eum animi necessitatibus illum quaerat, facilis tempora. Nobis itaque consequatur est voluptates? Esse ex reprehenderit blanditiis quam ullam voluptates.</p>
+            </div>
+          </dl>
       </section>
       <section>
-        <button>bouton 2</button>
-        <p>Recusandae quidem asperiores nulla veniam, autem quos eos iure facere maiores eum animi necessitatibus illum quaerat, facilis tempora. Nobis itaque consequatur est voluptates? Esse ex reprehenderit blanditiis quam ullam voluptates.</p>
-      </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Unde fugiat recusandae alias soluta fuga aperiam, iure nam culpa eum ad, commodi minus expedita nisi! Voluptatem, ipsa consectetur maiores ut quibusdam reiciendis magnam placeat. Ea consectetur neque eos alias.</p>
-      </section>
+        <dl x-data="{bouton3IsOpen: false}">
+          <dt @click="bouton3IsOpen = ! bouton3IsOpen"><button>bouton 3</button></dt>
+          <div id="bouton 3" x-show="bouton3IsOpen" x-transition.duration.800ms>
+              <p>Unde fugiat recusandae alias soluta fuga aperiam, iure nam culpa eum ad, commodi minus expedita nisi! Voluptatem, ipsa consectetur maiores ut quibusdam reiciendis magnam placeat. Ea consectetur neque eos alias.</p>
+          </div>
+        </dl>
+          </section>
     </div>
   </body>
 </html>
